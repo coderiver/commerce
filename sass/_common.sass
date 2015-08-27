@@ -47,120 +47,103 @@
 // p
 // 	+jpg(bla)
 
++font("ProximaNova Extrabold", ProximaNova-Extrabold)
++font("ProximaNova Bold", ProximaNova-Bold)
++font("ProximaNova Semibold", ProximaNova-Semibold)
++font("ProximaNova Regular", ProximaNova-Regular)
+
+=extra
+	font-family: "ProximaNova Extrabold", Arial, sans-serif
+=bold
+	font-family: "ProximaNova Bold", Arial, sans-serif
+=semi
+	font-family: "ProximaNova Semibold", Arial, sans-serif
+=reg
+	font-family: "ProximaNova Regular", Arial, sans-serif
 
 body
 	font-family: Arial, sans-serif 
 	font-size: 12px 
 	line-height: 1.4
 
+a
+	text-decoration: none
 
 // common blocks      
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.container
+	width: 1110px
+	margin: 0 auto
+	+clr
+	
+.btn
+	display: block
+	width: 200px
+	height: 54px
+	padding: 20px 0
+	text-align: center
+	text-transform: uppercase
+	color: #FFF 
+	font-size: 14px
+	line-height: 1
+	+extra
+	&.btn_orange
+		background: #E35205 
+		& > span.img-video
+			vertical-align: middle
+			margin: -6px 0 -3px 15px
+			+svg(video, 26, 25)
+		&:hover
+			background: #F36D25
+	&.btn_white
+		background: #FFF
+		color: #E35205
+		&:hover
+			background: #F36D25
+			color: #FFF  
+	&.btn_gray
+		background: #5b6770
+		&:hover
+			background: #6F7E89 
+			
+.h1
+	margin-bottom: 50px
+	text-transform: uppercase
+	color: #FFF 
+	font-size: 50px
+	line-height: 1.12
+	+bold
+
+.h2
+	color: #FFF
+	font-size: 26px
+	font-weight: 700
+	text-transform: uppercase
+
+.h3
+	width: 510px
+	margin: 0 auto 20px
+	color: #1ca0e1
+	font-size: 24px
+	font-weight: 600
+	line-height: 35px
+	+semi
+
+.menu
+	ul
+		+clr
+		li
+			float: left
+			margin-left: 50px
+			&:first-child
+				margin-left: 0
+			a
+				display: block
+				text-transform: uppercase
+				color: #FFF
+				font-size: 15px
+				+extra
+
+.line
+	margin-bottom: 35px
+	+svg(line, 11, 68)
