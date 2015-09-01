@@ -9,6 +9,11 @@
 		.menu
 			float: right
 			margin-top: 10px
+			ul li a
+				&:hover, &.is-active
+					margin-bottom: 0
+					padding-bottom: 17px
+					border-bottom: 4px solid #ededed
 	.header__inner
 		padding: 90px 0
 		p
@@ -26,6 +31,22 @@
 			padding: 9px 0 
 		a.btn
 			float: right
+	&.header_faq
+		.header__wrap
+			background: url("../img/faq-bg.jpg")
+			+cover
+		.header__top
+			padding: 40px 0
+	&.header_classes
+		.header__wrap
+			background: url("../img/bg-classes.jpg")
+			+cover
+		.header__inner
+			padding: 120px 0 260px
+			.h1
+				max-width: 830px
+				margin: 0 auto
+				text-align: center
 
 .logo
 	float: left
