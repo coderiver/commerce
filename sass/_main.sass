@@ -2,8 +2,18 @@
 .main
 	.main__wrap
 		padding: 80px 0
-		&.team
-			background: url("../img/bg-team.jpg")
+		&:nth-child(n+1)
+			background: #FFF
+			+cover
+		&:nth-child(2n)
+			background: url("../img/bg-2n.jpg")
+			+cover
+		&.mentors
+			padding: 0 0 170px 0
+			background: #F9F9F9
+		&.sponsors
+			position: relative
+			background: url("../img/bg-sponsors.jpg") 
 			+cover
 	.main__logo
 		text-align: center
@@ -127,6 +137,10 @@
 	.slick-next
 		right: -24px
 		+svg(next, 31, 31)
+.slide-wrap
+	&:hover
+		.slide__hover
+			display: block
 .slide
 	display: inline-block
 	vertical-align: top
@@ -134,8 +148,27 @@
 	height: 350px
 	margin: 0 24px
 	background: #FFF
+	.slide__img
+		position: relative
 	.slide__hover
 		display: none
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		text-align: center
+		img
+			opacity: 0.84
+		p
+			position: absolute
+			top: 50%
+			left: 0
+			right: 0
+			text-transform: uppercase
+			font-size: 12px
+			color: #FFF
+			font-weight: 800
+			+extra  
 	.slide__text
 		padding: 25px
 		color: #5a5a5a
@@ -159,19 +192,272 @@
 		ul
 			margin-left: -48px
 			font-size: 0
+			text-align: left
 			li
 				display: inline-block
 				vertical-align: top
-				a
+				margin: 20px 0 40px 48px
+				> a
 					display: block
 					width: 240px
 					height: 235px
-					margin-left: 48px
-					border: 1px solid #dadddf 
-					text-align: center
+					border: 1px solid #dadddf
 					+vertical
 					img
 						display: inline-block
 						vertical-align: middle
 		& + .btn
 			margin: 60px auto
+			
+
+// faq.html
+
+.main__wrap.faq
+	padding: 0 0 100px
+
+.faq
+	.h3
+		padding: 50px 0 30px
+	.faq__menu
+		text-align: center
+		+clr
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 0 30px
+			border-left: 1px solid #5b6770
+			&:first-child
+				border: none
+			a
+				display: block
+				text-transform: uppercase
+				color: #5B6770
+				font-size: 14px
+				&:hover, &.is-active
+					color: #1CA0E1 
+	.faq__main
+		margin: 40px 0
+		border: 1px solid #dbdee0 
+		text-align: left
+	.faq__item
+		border-top: 1px solid #DBDEE0 
+		&:first-child
+			border: none
+		&.is-active 
+			.faq__title 
+				background: #FAFAFB 
+				a
+					font-weight: 700 
+					color: #E35205 
+					+bold
+				i
+					&:before
+						display: none
+					&:after
+						display: inline-block
+	.faq__title
+		padding: 20px 20px 20px 30px
+		cursor: pointer
+		+clr
+		a
+			float: left
+			font-size: 17px
+			font-weight: 400 
+			color: #5A5A5A
+			+reg 
+		i
+			float: right
+			&:before
+				content: ""
+				vertical-align: bottom
+				+svg(arr, 8, 14)
+			&:after
+				content: ""
+				+svg(arr_b, 14, 9)
+				display: none
+				vertical-align: bottom
+	.faq__content
+		display: none
+		padding: 20px 20px 20px 30px
+		border-top: 1px solid #DBDEE0 
+		color: #5a5a5a
+		font-size: 15px
+		span
+			display: block
+			padding: 10px 0
+			font-weight: 700
+			&:first-child
+				padding-top: 0
+		p
+			font-weight: 400 
+			
+
+// classes.html
+
+.classes
+	.main__logo
+		margin-top: -215px
+		.class__logo
+			+svg(class2, 276, 275)
+			p
+				bottom: 90px
+				
+.class__text
+	display: block
+	width: 240px
+	padding-top: 20px
+	text-align: left
+	span
+		color: #e35205
+		font-size: 17px
+		font-weight: 700
+		+bold
+	p
+		display: block
+		padding-bottom: 10px
+		color: #5a5a5a
+		font-size: 15px
+		font-weight: 400
+		+reg
+	a
+		display: block
+		color: #5a5a5a
+		font-size: 15px
+		font-weight: 600
+		+semi
+
+.testimonials
+	.h3
+		margin: 35px auto
+	.testimonials__logo
+		margin-bottom: 0
+		+svg(testimonials, 57, 50)
+	.testimonials__inn
+		text-align: left
+		ul
+			margin-left: -40px
+			font-size: 0
+			li
+				display: inline-block
+				vertical-align: top
+				width: 342px
+				margin: 35px 0 35px 40px
+				color: #5a5a5a
+				span
+					display: block
+					margin-bottom: 5px
+					font-size: 14px
+					font-weight: 700
+					text-transform: uppercase
+					+bold
+				p
+					display: block
+					font-size: 15px
+					font-weight: 400
+					+reg
+	.testimonials__item
+		position: relative
+		margin-bottom: 25px
+		padding: 25px
+		border: 1px solid #dcdfe1
+		&:before, &:after
+			content: ""
+			position: absolute
+		&:before
+			left: 42px
+			bottom: -12px
+			+arr(20, 12, #dcdfe1, b)
+			z-index: 2
+		&:after
+			left: 43px
+			bottom: -10px
+			+arr(18, 10, #FFF, b)
+			z-index: 3
+			
+
+// team.html
+
+.main_team
+	.main__logo
+		margin-top: -215px
+		.team__logo
+			margin: 0
+	.team__inn
+		margin: 15px 0
+		.line
+			margin: 25px 100px
+	.team__inner
+		+justify
+		line-height: inherit
+			
+.person
+	display: inline-block
+	vertical-align: top
+	width: 242px
+	margin: 25px 0
+	text-align: left
+	img
+		display: block
+		margin-bottom: 25px
+	span
+		display: block
+		padding-bottom: 5px
+		color: #e35205
+		font-size: 17px
+		font-weight: 700
+		line-height: 25px
+		+bold
+	b
+		display: block
+		margin-bottom: 10px
+		color: #1ca0e1
+		font-size: 17px
+		font-weight: 700
+		+bold
+	p
+		display: block
+		color: #5a5a5a
+		font-size: 15px
+		font-weight: 400
+		+reg
+	a
+		+svg(in, 19, 16)
+		display: block
+		margin-top: 15px
+		
+.mentors
+	.line
+		margin-top: -50px
+	.mentors__inner
+		+justify
+		line-height: inherit
+		
+.sponsors
+	&:before
+		content: ""
+		position: absolute
+		top: -101px
+		left: 50%
+		+transform(translateX(-50%))
+		+s(sponsors-top)
+	.main__logo
+		margin-top: -140px
+		.sponsors__logo
+			+svg(sponsors-logo, 208, 207)
+	.main__inner
+		padding: 45px 0
+		text-align: center
+	.sponsors__item
+		display: inline-block
+		vertical-align: top
+		margin: 0 65px
+		background: #FFF
+		.person
+			width: 400px
+			margin: 0
+			padding: 40px
+			text-align: center
+			img
+				margin: 40px
+			a
+				margin: 15px auto 0

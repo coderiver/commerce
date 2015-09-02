@@ -149,7 +149,8 @@ a
 	margin-bottom: 35px
 	+svg(line, 11, 68)
 	&.line_s
-		height: 41px
-		-webkit-background-size: 11px 41px 
-		-o-background-size: 11px 41px 
-		background-size: 11px 41px 
+		+svg(line-s, 11, 41) 
+	&.line_m
+		+svg(line-m, 11, 121)
+	&.line_l
+		+svg(line-l, 11, 576)
