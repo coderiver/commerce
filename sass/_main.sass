@@ -2,6 +2,8 @@
 .main
 	.main__wrap
 		padding: 80px 0
+		+r(1023)
+			padding: 80px 0 0
 		&:nth-child(n+1)
 			background: #FFF
 			+cover
@@ -55,6 +57,9 @@
 			li.approach__text
 				width: 250px
 				text-align: center
+				+r(1023)
+					width: 29%
+					margin: 0 2%
 				i
 					margin: 0 auto 35px
 					&.understand
@@ -109,6 +114,12 @@
 				+svg(item3, 61, 99)
 			&.item4
 				+svg(item4, 81, 93)
+	+r(1109)
+		.approach__inner
+			margin-left: -40px
+		.approach__item
+			width: 45%
+			margin-left: 5%
 				
 .team
 	span.team__logo
@@ -116,11 +127,18 @@
 		p
 			bottom: 90px
 	.main__inner
+		& > p
+			padding-bottom: 0
 		& > .btn
 			margin: 0 auto
+			+r(1023)
+				margin: 0 auto 60px
 	.team__slider
 		margin: 0 -24px
 		padding: 90px 0
+		+r(1210)
+			margin: 0 24px
+			padding: 40px 0
 	
 .slider
 	position: relative
@@ -137,19 +155,30 @@
 	.slick-next
 		right: -24px
 		+svg(next, 31, 31)
+	+r(1023)
+		.slick-prev
+			left: -40px
+		.slick-next
+			right: -40px
 .slide-wrap
-	&:hover
-		.slide__hover
-			display: block
-.slide
 	display: inline-block
 	vertical-align: top
-	width: 242px
+	width: 25%
 	height: 350px
 	margin: 0 24px
 	background: #FFF
+	&:hover
+		.slide__hover
+			display: block
+	+r(1023)
+		height: 320px
+		margin: 0 10px
+.slide
+	width: 100% 
 	.slide__img
 		position: relative
+		img
+			width: 100% 
 	.slide__hover
 		display: none
 		position: absolute
@@ -192,11 +221,12 @@
 		ul
 			margin-left: -48px
 			font-size: 0
-			text-align: left
+			text-align: center
 			li
 				display: inline-block
 				vertical-align: top
 				margin: 20px 0 40px 48px
+				text-align: left
 				> a
 					display: block
 					width: 240px
@@ -208,6 +238,11 @@
 						vertical-align: middle
 		& + .btn
 			margin: 60px auto
+	+r(1023)
+		.class__inn
+			padding: 0
+			& + .btn
+				margin: 20px auto 60px
 			
 
 // faq.html
@@ -301,6 +336,11 @@
 			+svg(class2, 276, 275)
 			p
 				bottom: 90px
+				
+.past-classes
+	.class__inn
+		ul
+			text-align: left
 				
 .class__text
 	display: block

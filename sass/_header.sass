@@ -16,6 +16,8 @@
 					border-bottom: 4px solid #ededed
 	.header__inner
 		padding: 90px 0
+		.h1
+			max-width: 830px
 		p
 			padding-bottom: 15px
 			color: #FFF 
@@ -31,6 +33,13 @@
 			padding: 9px 0 
 		a.btn
 			float: right
+		+r(1023)
+			text-align: center
+			.h2
+				float: none
+			a.btn
+				float: none
+				margin: 0 auto
 	&.header_faq
 		.header__wrap
 			background: url("../img/faq-bg.jpg")
@@ -44,7 +53,6 @@
 		.header__inner
 			padding: 120px 0 260px
 			.h1
-				max-width: 830px
 				margin: 0 auto
 				text-align: center
 	&.header_team
@@ -54,7 +62,6 @@
 		.header__inner
 			padding: 120px 0 260px
 			.h1
-				max-width: 830px
 				margin: 0 auto
 				text-align: center
 
