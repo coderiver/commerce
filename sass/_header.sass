@@ -1,11 +1,13 @@
 // header
 .header
 	.header__wrap
+		position: relative
 		background: url("../img/bg-h.jpg")
 		+cover
 	.header__top
 		padding-top: 20px
-		+clr
+		.container
+			+clr
 		.menu
 			float: right
 			margin-top: 10px
@@ -33,13 +35,9 @@
 			padding: 9px 0 
 		a.btn
 			float: right
-		+r(1023)
-			text-align: center
-			.h2
-				float: none
-			a.btn
-				float: none
-				margin: 0 auto
+	&.header_main
+		> .btn
+			display: none
 	&.header_faq
 		.header__wrap
 			background: url("../img/faq-bg.jpg")
@@ -64,9 +62,47 @@
 			.h1
 				margin: 0 auto
 				text-align: center
+	+r(1023)
+		.header__bottom
+			text-align: center
+			.h2
+				float: none
+			a.btn
+				float: none
+				margin: 0 auto
+	+r(767)
+		&.header
+			.header__top
+				padding: 11px 0 8px
+				background: url("../img/bg-t-m.jpg")
+				+cover
+				.menu-mob
+					display: block
+			.header__inner
+				padding: 120px 0 0
+				> .container 
+					p
+						font-size: 20px
+						font-weight: 600 
+					.h1
+						margin-bottom: 30px
+						font-size: 25px
+						font-weight: 700 
+					> .btn
+						display: none
+		> .btn
+			display: block
+			width: 100% 
 
 .logo
 	float: left
+	.logo__m
+		display: none
+	+r(767)
+		.logo__d
+			display: none
+		.logo__m
+			display: block
 			
 .cards
 	margin-bottom: 30px
@@ -75,3 +111,8 @@
 		float: left
 		display: block	
 		margin-right: 30px
+	+r(767)
+		margin-bottom: 10px
+		a
+			float: none
+			margin-bottom: 10px

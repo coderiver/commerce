@@ -2,8 +2,6 @@
 .main
 	.main__wrap
 		padding: 80px 0
-		+r(1023)
-			padding: 80px 0 0
 		&:nth-child(n+1)
 			background: #FFF
 			+cover
@@ -46,6 +44,18 @@
 			+reg
 		& > .btn
 			margin: 0 auto 35px
+	+r(1023)
+		.main__wrap
+			padding: 80px 0 0
+			&.team
+				padding: 80px 0
+	+r(767)
+		.main__inner
+			> p
+				width: 94%
+				padding-bottom: 15px
+			> .btn
+				margin-bottom: 20px
 		
 .approach
 	.approach__logo
@@ -57,9 +67,6 @@
 			li.approach__text
 				width: 250px
 				text-align: center
-				+r(1023)
-					width: 29%
-					margin: 0 2%
 				i
 					margin: 0 auto 35px
 					&.understand
@@ -120,6 +127,33 @@
 		.approach__item
 			width: 45%
 			margin-left: 5%
+	+r(1023)
+		.approach__inn
+			ul
+				li.approach__text
+					width: 29%
+					margin: 0 2%
+	+r(767)
+		.approach__inn
+			ul
+				margin: 0 2%
+				li.approach__text
+					display: block
+					width: auto
+					margin: 0 auto 30px
+		.approach__inner
+			margin: 0 2%
+		.approach__item
+			display: block
+			width: auto
+			margin: 0 auto 30px
+			text-align: center
+		.approach__img
+			float: none
+			display: block
+			margin: 0 auto
+			padding-bottom: 15px
+
 				
 .team
 	span.team__logo
@@ -134,11 +168,20 @@
 			+r(1023)
 				margin: 0 auto 60px
 	.team__slider
-		margin: 0 -24px
+		width: 1110px
+		margin: 0 auto
 		padding: 90px 0
-		+r(1210)
-			margin: 0 24px
+	.btn
+		margin: 0 auto
+	+r(1210)
+		.team__slider
+			width: 90%
 			padding: 40px 0
+	+r(480)
+		.team__slider
+			width: 100%
+			padding: 40px 0
+			overflow: hidden
 	
 .slider
 	position: relative
@@ -155,11 +198,36 @@
 	.slick-next
 		right: -24px
 		+svg(next, 31, 31)
+	+r(1210)
+		width: 100% 
 	+r(1023)
 		.slick-prev
 			left: -40px
 		.slick-next
 			right: -40px
+	+r(767)
+		.slick-prev
+			left: -30px
+		.slick-next
+			right: -30px
+	+r(560)
+		.slick-prev
+			left: -25px
+		.slick-next
+			right: -25px
+	+r(480)
+		width: auto
+		.slick-list
+			width: 100% 
+			overflow: visible
+		.slick-prev, .slick-next
+			top: 40%
+		.slick-prev
+			left: 0
+			+svg(prev-m, 25, 70)
+		.slick-next
+			right: 0
+			+svg(next-m, 25, 70)
 .slide-wrap
 	display: inline-block
 	vertical-align: top
@@ -171,8 +239,13 @@
 		.slide__hover
 			display: block
 	+r(1023)
-		height: 320px
+		min-height: 320px
 		margin: 0 10px
+	+r(440)
+		min-height: 350px
+		max-height: 440px 
+		height: 100%
+		margin: 0 15px
 .slide
 	width: 100% 
 	.slide__img
@@ -217,38 +290,75 @@
 	.class__logo
 		+svg(class, 177, 179)
 	.class__inn
+		width: 1110px
+		margin: 0 auto
 		padding: 40px 0 30px
-		ul
-			margin-left: -48px
-			font-size: 0
-			text-align: center
-			li
-				display: inline-block
-				vertical-align: top
-				margin: 20px 0 40px 48px
-				text-align: left
-				> a
-					display: block
-					width: 240px
-					height: 235px
-					border: 1px solid #dadddf
-					+vertical
-					img
-						display: inline-block
-						vertical-align: middle
 		& + .btn
 			margin: 60px auto
+	.class__wrap
+		position: relative
+		margin-left: -48px
+		font-size: 0
+		text-align: center
+		a
+			display: inline-block
+			vertical-align: top
+			margin: 20px 0 40px 48px
+			text-align: left
+			width: 240px
+			height: 235px
+			border: 1px solid #dadddf
+			+vertical
+			img
+				display: inline-block
+				vertical-align: middle
+	+r(1210)
+		.class__inn
+			width: 98%
+			margin: 0 auto
 	+r(1023)
 		.class__inn
 			padding: 0
 			& + .btn
 				margin: 20px auto 60px
+	+r(1210)
+		.class__inn
+			width: 90%
+	+r(480)
+		.class__inn
+			width: 100%
+			padding: 20px 0 40px
+			overflow: hidden
+		.class__wrap
+			width: auto
+			margin: 0 auto 
+			a
+				margin: 0 15px
+		.slick-list
+			width: 100% 
+			overflow: visible
+		.slick-prev, .slick-next
+			position: absolute
+			top: 35%
+			font-size: 0
+		.slick-prev
+			left: 0
+			+svg(prev-m, 25, 70)
+		.slick-next
+			right: 0
+			+svg(next-m, 25, 70)
 			
 
 // faq.html
 
 .main__wrap.faq
 	padding: 0 0 100px
+	+r(1210)
+		.container
+			width: 980px
+	+r(1023)
+		.container
+			width: 94%
 
 .faq
 	.h3
@@ -296,6 +406,7 @@
 		+clr
 		a
 			float: left
+			width: 90%
 			font-size: 17px
 			font-weight: 400 
 			color: #5A5A5A
@@ -339,32 +450,54 @@
 				
 .past-classes
 	.class__inn
-		ul
+		.class__wrap
 			text-align: left
-				
-.class__text
-	display: block
-	width: 240px
-	padding-top: 20px
-	text-align: left
-	span
-		color: #e35205
-		font-size: 17px
-		font-weight: 700
-		+bold
-	p
-		display: block
-		padding-bottom: 10px
-		color: #5a5a5a
-		font-size: 15px
-		font-weight: 400
-		+reg
-	a
-		display: block
-		color: #5a5a5a
-		font-size: 15px
-		font-weight: 600
-		+semi
+	
+.class
+	.class__wrap		
+		.class__item
+			display: inline-block
+			vertical-align: top
+			margin: 20px 0 40px 48px
+			.class__img
+				display: block
+				text-align: left
+				width: 240px
+				height: 235px
+				border: 1px solid #dadddf
+				background: #FFF 
+				+vertical
+				img
+					display: inline-block
+					vertical-align: middle				
+			.class__text
+				display: block
+				width: 240px
+				padding-top: 20px
+				text-align: left
+				> span
+					color: #e35205
+					font-size: 17px
+					font-weight: 700
+					+bold
+				> p
+					display: block
+					padding-bottom: 10px
+					color: #5a5a5a
+					font-size: 15px
+					font-weight: 400
+					+reg
+				> a
+					display: block
+					width: auto
+					height: auto
+					margin: 0
+					border: none
+					text-align: left
+					color: #5a5a5a
+					font-size: 15px
+					font-weight: 600
+					+semi
 
 .testimonials
 	.h3

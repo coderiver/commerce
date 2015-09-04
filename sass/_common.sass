@@ -78,7 +78,10 @@ a
 	+r(1109)
 		width: 980px
 	+r(1023)
-		width: 90%
+		width: 94%
+	+r(767)
+		width: auto
+		margin: 0 3%
 	
 .btn
 	display: block
@@ -109,6 +112,14 @@ a
 		background: #5b6770
 		&:hover
 			background: #6F7E89 
+	+r(767)
+		width: 164px
+		height: 45px
+		padding: 17px 0
+		font-size: 12px
+		&.btn_orange
+			span.img-video
+				+svg(video, 23, 22)
 			
 .h1
 	margin-bottom: 50px
@@ -123,6 +134,11 @@ a
 	font-size: 26px
 	font-weight: 700
 	text-transform: uppercase
+	+r(767)
+		width: 90%
+		margin: 0 auto
+		font-size: 17px
+		font-weight: 700 
 
 .h3
 	width: 510px
@@ -132,6 +148,11 @@ a
 	font-weight: 600
 	line-height: 35px
 	+semi
+	+r(767)
+		width: 90%
+		margin: 0 auto
+		font-size: 20px
+		font-weight: 600 
 
 .menu
 	ul
@@ -148,6 +169,72 @@ a
 				color: #FFF
 				font-size: 15px
 				+extra
+	&.menu_drop
+		display: none
+		&.is-active
+			display: block
+			position: absolute
+			top: 55px
+			left: 0
+			right: 0
+			bottom: 0
+			background: url("../img/bg-drop.jpg")
+			padding: 30px
+			text-align: center
+			+vertical
+			ul
+				display: inline-block
+				vertical-align: middle
+				li
+					float: none
+					display: block
+					margin: 0
+					padding: 20px 0
+					a
+						font-size: 33px
+						font-weight: 700
+						line-height: normal 
+						+bold
+	+r(767)
+		display: none
+		
+.menu-mob
+	display: none
+	padding: 15px 0
+	float: right
+	span
+		display: block
+		position: relative
+		width: 22px
+		height: 3px
+		background: #FFF
+		-webkit-transition-duration: 0s
+		transition-duration: 0s
+		-webkit-transition-delay: 0.2s
+		transition-delay: 0.2s
+		&:before, &:after
+			content: ""
+			position: absolute
+			left: 0
+			width: 22px
+			height: 3px
+			background: #FFF
+			+transition(transform, 0.2s, 0.2s 0s)
+		&:before
+			top: -9px
+		&:after
+			top: 9px
+	&.is-active
+		span
+			background: transparent 
+			-webkit-transition-delay: 0.2s 
+			transition-delay: 0.2s
+			&:before
+				top: 0
+				+rotate(45)
+			&:after
+				top: 0
+				+rotate(-45)
 
 .line
 	margin-bottom: 35px
@@ -158,3 +245,5 @@ a
 		+svg(line-m, 11, 121)
 	&.line_l
 		+svg(line-l, 11, 576)
+	+r(767)
+		margin-bottom: 15px
