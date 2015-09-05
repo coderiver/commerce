@@ -49,6 +49,10 @@
 			padding: 80px 0 0
 			&.team
 				padding: 80px 0
+			&.class
+				padding: 80px 0 40px
+			&.testimonials
+				padding: 80px 0 40px
 	+r(767)
 		.main__inner
 			> p
@@ -56,6 +60,12 @@
 				padding-bottom: 15px
 			> .btn
 				margin-bottom: 20px
+	+r(580)
+		.main__wrap
+			&.past-classes
+				padding: 40px 0
+			&.classes, &.testimonials
+				padding: 40px 0 20px
 		
 .approach
 	.approach__logo
@@ -177,7 +187,7 @@
 		.team__slider
 			width: 90%
 			padding: 40px 0
-	+r(480)
+	+r(580)
 		.team__slider
 			width: 100%
 			padding: 40px 0
@@ -210,12 +220,7 @@
 			left: -30px
 		.slick-next
 			right: -30px
-	+r(560)
-		.slick-prev
-			left: -25px
-		.slick-next
-			right: -25px
-	+r(480)
+	+r(580)
 		width: auto
 		.slick-list
 			width: 100% 
@@ -241,11 +246,13 @@
 	+r(1023)
 		min-height: 320px
 		margin: 0 10px
+	+r(580)
+		min-height: 380px
+		height: 100%
 	+r(440)
 		min-height: 350px
 		max-height: 440px 
 		height: 100%
-		margin: 0 15px
 .slide
 	width: 100% 
 	.slide__img
@@ -314,17 +321,14 @@
 				vertical-align: middle
 	+r(1210)
 		.class__inn
-			width: 98%
+			width: 90%
 			margin: 0 auto
 	+r(1023)
 		.class__inn
 			padding: 0
 			& + .btn
 				margin: 20px auto 60px
-	+r(1210)
-		.class__inn
-			width: 90%
-	+r(480)
+	+r(580)
 		.class__inn
 			width: 100%
 			padding: 20px 0 40px
@@ -333,7 +337,7 @@
 			width: auto
 			margin: 0 auto 
 			a
-				margin: 0 15px
+				margin: 0 10px
 		.slick-list
 			width: 100% 
 			overflow: visible
@@ -436,6 +440,10 @@
 				padding-top: 0
 		p
 			font-weight: 400 
+	+r(767)
+		.faq__menu
+			li
+				border: none
 			
 
 // classes.html
@@ -447,22 +455,39 @@
 			+svg(class2, 276, 275)
 			p
 				bottom: 90px
+	+r(580)
+		.main__logo
+			.class__logo
+				margin: 0
+		.class__inn
+			padding: 20px 0 0
+		.slick-prev, .slick-next
+			top: 17%
 				
 .past-classes
 	.class__inn
 		.class__wrap
 			text-align: left
+	+r(1210)
+		.class__inn
+			.class__wrap
+				text-align: center
+	+r(580)
+		.class__inn
+			padding: 20px 0 0
+		.slick-prev, .slick-next
+			top: 17%
 	
 .class
 	.class__wrap		
 		.class__item
 			display: inline-block
 			vertical-align: top
+			width: 240px
 			margin: 20px 0 40px 48px
 			.class__img
 				display: block
 				text-align: left
-				width: 240px
 				height: 235px
 				border: 1px solid #dadddf
 				background: #FFF 
@@ -472,7 +497,6 @@
 					vertical-align: middle				
 			.class__text
 				display: block
-				width: 240px
 				padding-top: 20px
 				text-align: left
 				> span
@@ -498,6 +522,11 @@
 					font-size: 15px
 					font-weight: 600
 					+semi
+	+r(580)
+		.class__wrap		
+			.class__item
+				width: auto
+				margin: 0 10px
 
 .testimonials
 	.h3
@@ -506,29 +535,33 @@
 		margin-bottom: 0
 		+svg(testimonials, 57, 50)
 	.testimonials__inn
+		width: 1110px
+		margin: 0 auto
 		text-align: left
-		ul
-			margin-left: -40px
-			font-size: 0
-			li
-				display: inline-block
-				vertical-align: top
-				width: 342px
-				margin: 35px 0 35px 40px
-				color: #5a5a5a
-				span
-					display: block
-					margin-bottom: 5px
-					font-size: 14px
-					font-weight: 700
-					text-transform: uppercase
-					+bold
-				p
-					display: block
-					font-size: 15px
-					font-weight: 400
-					+reg
+	.testimonials__wrap
+		position: relative
+		margin-left: -40px
+		font-size: 0
 	.testimonials__item
+		display: inline-block
+		vertical-align: top
+		width: 342px
+		margin: 35px 0 35px 40px
+		color: #5a5a5a
+		text-align: left
+		span
+			display: block
+			margin-bottom: 5px
+			font-size: 14px
+			font-weight: 700
+			text-transform: uppercase
+			+bold
+		p
+			display: block
+			font-size: 15px
+			font-weight: 400
+			+reg
+	.testimonials__post
 		position: relative
 		margin-bottom: 25px
 		padding: 25px
@@ -546,6 +579,36 @@
 			bottom: -10px
 			+arr(18, 10, #FFF, b)
 			z-index: 3
+	+r(1210)
+		.testimonials__inn
+			width: 90%
+			margin: 0 auto
+			text-align: center
+	+r(1150)
+		.testimonials__wrap
+			text-align: center
+	+r(1023)
+		.h3
+			margin: 0px auto 40px
+		.testimonials__wrap
+			margin-left: -5%
+		.testimonials__item
+			width: 45%
+			margin: 0 0 50px 5%
+	+r(580)
+		.main__logo
+			.testimonials__logo
+				margin: 0
+		.h3
+			margin: 10px auto 20px 
+		.testimonials__inn
+			width: 100%
+		.testimonials__wrap
+			margin: 0 auto
+		.testimonials__item
+			margin: 0 10px
+		.slick-prev, .slick-next
+			top: 30%
 			
 
 // team.html
@@ -634,3 +697,8 @@
 				margin: 40px
 			a
 				margin: 15px auto 0
+	+r(1200)
+		.main__inner
+			padding: 0
+		.sponsors__item
+			margin-bottom: 60px

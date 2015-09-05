@@ -171,30 +171,31 @@ a
 				+extra
 	&.menu_drop
 		display: none
+		position: absolute
+		top: 55px
+		left: 0
+		right: 0
+		bottom: 0
+		background: url("../img/bg-drop.jpg")
+		padding: 30px
+		text-align: center
+		z-index: 2
+		+vertical
+		ul
+			display: inline-block
+			vertical-align: middle
+			li
+				float: none
+				display: block
+				margin: 0
+				padding: 20px 0
+				a
+					font-size: 33px
+					font-weight: 700
+					line-height: normal 
+					+bold
 		&.is-active
 			display: block
-			position: absolute
-			top: 55px
-			left: 0
-			right: 0
-			bottom: 0
-			background: url("../img/bg-drop.jpg")
-			padding: 30px
-			text-align: center
-			+vertical
-			ul
-				display: inline-block
-				vertical-align: middle
-				li
-					float: none
-					display: block
-					margin: 0
-					padding: 20px 0
-					a
-						font-size: 33px
-						font-weight: 700
-						line-height: normal 
-						+bold
 	+r(767)
 		display: none
 		

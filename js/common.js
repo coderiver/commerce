@@ -23,7 +23,9 @@ head.ready(function() {
 		      breakpoint: 620,
 		      settings: {
 		        slidesToShow: 2,
-		        slidesToScroll: 1
+		        slidesToScroll: 1,
+		        infinite: true,
+		        centerMode: true
 		      }
 		    },
 		    {
@@ -38,12 +40,20 @@ head.ready(function() {
 		]
 	});
 
-	if ($(window).width() <=480) {
-		$('.js-class').slick();
+	if ($(window).width() <=580) {
+		$('.js-class').slick({
+				slidesToShow: 1,
+			  	slidesToScroll: 1,
+				infinite: true,
+		        centerMode: true,
+		        centerPadding: '40px',
+				arrows: true,
+				dots: false
+			});
 	};
 
 	$(window).resize(function() {
-		if ($(window).width() <=480) {
+		if ($(window).width() <=580) {
 			$('.js-class').slick({
 				slidesToShow: 1,
 			  	slidesToScroll: 1,
