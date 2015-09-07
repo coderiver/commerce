@@ -259,7 +259,7 @@ a { text-decoration: none; }
 .testimonials .h3 { margin: 35px auto; }
 .testimonials .testimonials__logo { margin-bottom: 0; background: url("../img/svg/testimonials.svg") no-repeat 0 0; -moz-background-size: 57px 50px; -o-background-size: 57px 50px; -webkit-background-size: 57px 50px; background-size: 57px 50px; width: 57px; height: 50px; display: inline-block; }
 .testimonials .testimonials__inn { width: 1110px; margin: 0 auto; text-align: left; }
-.testimonials .testimonials__wrap { position: relative; font-size: 0; overflow: hidden; }
+.testimonials .testimonials__wrap { position: relative; font-size: 0; }
 .testimonials .testimonials__wrap .slick-list { overflow: hidden; }
 .testimonials .testimonials__wrap .slick-prev, .testimonials .testimonials__wrap .slick-next { position: absolute; top: 45%; font-size: 0; }
 .testimonials .testimonials__wrap .slick-prev { left: -24px; background: url("../img/svg/prev.svg") no-repeat 0 0; -moz-background-size: 31px 31px; -o-background-size: 31px 31px; -webkit-background-size: 31px 31px; background-size: 31px 31px; width: 31px; height: 31px; display: inline-block; }
