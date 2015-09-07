@@ -23,9 +23,7 @@ head.ready(function() {
 		      breakpoint: 620,
 		      settings: {
 		        slidesToShow: 2,
-		        slidesToScroll: 1,
-		        infinite: true,
-		        centerMode: true
+		        slidesToScroll: 1
 		      }
 		    },
 		    {
@@ -40,33 +38,36 @@ head.ready(function() {
 		]
 	});
 
-	if ($(window).width() <=580) {
-		$('.js-class').slick({
-				slidesToShow: 1,
-			  	slidesToScroll: 1,
-				infinite: true,
-		        centerMode: true,
-		        centerPadding: '40px',
-				arrows: true,
-				dots: false
-			});
-	};
-
-	$(window).resize(function() {
-		if ($(window).width() <=580) {
-			$('.js-class').slick({
-				slidesToShow: 1,
-			  	slidesToScroll: 1,
-				infinite: true,
-		        centerMode: true,
-		        centerPadding: '40px',
-				arrows: true,
-				dots: false
-			});
-		}
-		else {
-			$('.js-class').slick('unslick');
-		}
+	$('.js-class').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		arrows: true,
+		dots: false,
+		responsive: [
+		    {
+		      breakpoint: 1210,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 1
+		      }
+		    },
+		    {
+		      breakpoint: 850,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 1
+		      }
+		    },
+		    {
+		      breakpoint: 580,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+		        infinite: true,
+		        centerMode: true
+		      }
+		    }
+		]
 	});
 
 	(function() {
@@ -107,5 +108,25 @@ head.ready(function() {
 	    }
 
 	})();
+
+	$(".js-video").click(function() {
+	    $.fancybox({
+            'padding'       : 0,
+            'autoScale'     : false,
+            'transitionIn'  : 'none',
+            'transitionOut' : 'none',
+            'title'         : this.title,
+            'width'     	: 800,
+            'height'        : 600,
+            'href'          : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+            'type'          : 'swf',
+            'swf'           : {
+                'wmode'        		: 'transparent',
+                'allowfullscreen'   : 'true'
+            }
+        });
+
+	    return false;
+	});
 
 });

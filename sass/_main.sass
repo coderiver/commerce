@@ -304,21 +304,33 @@
 			margin: 60px auto
 	.class__wrap
 		position: relative
-		margin-left: -48px
 		font-size: 0
 		text-align: center
+		margin: 20px 0 40px
 		a
 			display: inline-block
 			vertical-align: top
-			margin: 20px 0 40px 48px
 			text-align: left
 			width: 240px
 			height: 235px
+			margin: 0 24px 
 			border: 1px solid #dadddf
 			+vertical
 			img
 				display: inline-block
 				vertical-align: middle
+		.slick-list
+			overflow: hidden
+		.slick-prev, .slick-next
+			position: absolute
+			top: 45%
+			font-size: 0
+		.slick-prev
+			left: -24px
+			+svg(prev, 31, 31)	
+		.slick-next
+			right: -24px
+			+svg(next, 31, 31)
 	+r(1210)
 		.class__inn
 			width: 90%
@@ -328,6 +340,9 @@
 			padding: 0
 			& + .btn
 				margin: 20px auto 60px
+	+r(900)
+		.class__wrap a
+			margin: 0 10px
 	+r(580)
 		.class__inn
 			width: 100%
@@ -336,21 +351,18 @@
 		.class__wrap
 			width: auto
 			margin: 0 auto 
-			a
-				margin: 0 10px
-		.slick-list
-			width: 100% 
-			overflow: visible
-		.slick-prev, .slick-next
-			position: absolute
-			top: 35%
-			font-size: 0
-		.slick-prev
-			left: 0
-			+svg(prev-m, 25, 70)
-		.slick-next
-			right: 0
-			+svg(next-m, 25, 70)
+			.slick-list
+				width: 100% 
+				overflow: visible
+			.slick-prev, .slick-next
+				top: 35%
+				font-size: 0
+			.slick-prev
+				left: 0
+				+svg(prev-m, 25, 70)
+			.slick-next
+				right: 0
+				+svg(next-m, 25, 70)
 			
 
 // faq.html
@@ -484,7 +496,7 @@
 			display: inline-block
 			vertical-align: top
 			width: 240px
-			margin: 20px 0 40px 48px
+			margin: 20px 24px 40px
 			.class__img
 				display: block
 				text-align: left
@@ -540,13 +552,25 @@
 		text-align: left
 	.testimonials__wrap
 		position: relative
-		margin-left: -40px
 		font-size: 0
+		overflow: hidden
+		.slick-list
+			overflow: hidden
+		.slick-prev, .slick-next
+			position: absolute
+			top: 45%
+			font-size: 0
+		.slick-prev
+			left: -24px
+			+svg(prev, 31, 31)	
+		.slick-next
+			right: -24px
+			+svg(next, 31, 31)
 	.testimonials__item
 		display: inline-block
 		vertical-align: top
 		width: 342px
-		margin: 35px 0 35px 40px
+		margin: 35px 20px 35px
 		color: #5a5a5a
 		text-align: left
 		span
@@ -591,10 +615,10 @@
 		.h3
 			margin: 0px auto 40px
 		.testimonials__wrap
-			margin-left: -5%
+			overflow: visible
 		.testimonials__item
-			width: 45%
-			margin: 0 0 50px 5%
+			width: auto
+			margin: 0 10px
 	+r(580)
 		.main__logo
 			.testimonials__logo
@@ -605,10 +629,16 @@
 			width: 100%
 		.testimonials__wrap
 			margin: 0 auto
-		.testimonials__item
-			margin: 0 10px
-		.slick-prev, .slick-next
-			top: 30%
+			.slick-prev, .slick-next
+				position: absolute
+				top: 30%
+				font-size: 0
+			.slick-prev
+				left: 0
+				+svg(prev-m, 25, 70)
+			.slick-next
+				right: 0
+				+svg(next-m, 25, 70)
 			
 
 // team.html
@@ -618,13 +648,36 @@
 		margin-top: -215px
 		.team__logo
 			margin: 0
+	.main__inner
+		p
+			padding-bottom: 35px
 	.team__inn
 		margin: 15px 0
 		.line
 			margin: 25px 100px
+		+ .line
+			display: none
 	.team__inner
 		+justify
 		line-height: inherit
+	+r(1023)
+		.team__inn
+			.line
+				margin: 25px 50px
+	+r(800)
+		.team__inner
+			text-align: center
+			.person
+				margin: 25px
+	+r(767)
+		.team__inn 
+			.person
+				margin: 25px
+			.line
+				display: none
+			+ .line
+				display: block
+				margin: 0 auto
 			
 .person
 	display: inline-block
@@ -667,6 +720,11 @@
 	.mentors__inner
 		+justify
 		line-height: inherit
+	+r(1023)
+		.mentors__inner
+			text-align: center
+			.person
+				margin: 25px
 		
 .sponsors
 	&:before
@@ -699,6 +757,19 @@
 				margin: 15px auto 0
 	+r(1200)
 		.main__inner
-			padding: 0
+			padding: 0 0 60px
+	+r(1024)
 		.sponsors__item
-			margin-bottom: 60px
+			margin: 30px
+	+r(580)
+		.sponsors__item
+			margin: 20px 
+			.person
+				width: 100%
+				img
+					margin: 40px auto
+	+r(480)
+		.sponsors__item	.person
+			img
+				width: 100% 
+				margin: 0px auto 20px
