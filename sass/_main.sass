@@ -382,20 +382,18 @@
 	.faq__menu
 		text-align: center
 		+clr
-		li
+		a
 			display: inline-block
 			vertical-align: top
 			padding: 0 30px
 			border-left: 1px solid #5b6770
+			text-transform: uppercase
+			color: #5B6770
+			font-size: 14px
+			&:hover, &.is-active
+				color: #1CA0E1 
 			&:first-child
 				border: none
-			a
-				display: block
-				text-transform: uppercase
-				color: #5B6770
-				font-size: 14px
-				&:hover, &.is-active
-					color: #1CA0E1 
 	.faq__main
 		margin: 40px 0
 		border: 1px solid #dbdee0 
