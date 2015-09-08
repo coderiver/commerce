@@ -47,19 +47,18 @@
 // p
 // 	+jpg(bla)
 
-+font("ProximaNova Extrabold", ProximaNova-Extrabold)
-+font("ProximaNova Bold", ProximaNova-Bold)
-+font("ProximaNova Semibold", ProximaNova-Semibold)
-+font("ProximaNova Regular", ProximaNova-Regular)
++font(ProximaNovaBlack, ProximaNovaBlack)
++font(ProximaNovaBold, ProximaNovaBold)
++font(ProximaNovaRegular, ProximaNovaRegular)
 
 =extra
-	font-family: "ProximaNova Extrabold", Arial, sans-serif
+	font-family: "ProximaNovaBlack", Arial, sans-serif
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
 =bold
-	font-family: "ProximaNova Bold", Arial, sans-serif
-=semi
-	font-family: "ProximaNova Semibold", Arial, sans-serif
+	font-family: "ProximaNovaBold", Arial, sans-serif
 =reg
-	font-family: "ProximaNova Regular", Arial, sans-serif
+	font-family: "ProximaNovaRegular", Arial, sans-serif
 
 body
 	font-family: Arial, sans-serif 
@@ -147,7 +146,7 @@ a
 	font-size: 24px
 	font-weight: 600
 	line-height: 35px
-	+semi
+	+bold
 	+r(767)
 		width: 90%
 		margin: 0 auto
@@ -172,7 +171,7 @@ a
 	&.menu_drop
 		display: none
 		position: absolute
-		top: 55px
+		top: 50px
 		left: 0
 		right: 0
 		bottom: 0

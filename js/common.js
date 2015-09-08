@@ -70,6 +70,51 @@ head.ready(function() {
 		]
 	});
 
+	if ($(window).width() <=1022) {
+		$('.js-classes').slick({
+			slidesToShow: 2,
+			slidesToScroll: 1,
+			arrows: true,
+			dots: false,
+			responsive: [
+			    {
+			      breakpoint: 600,
+			      settings: {
+			        slidesToShow: 1,
+			        slidesToScroll: 1,
+			        infinite: true,
+			        centerMode: true
+			      }
+			    }
+			]
+		});
+	};
+
+	$(window).resize(function() {
+		if ($(window).width() <=1022) {
+			$('.js-classes').slick({
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				arrows: true,
+				dots: false,
+				responsive: [
+				    {
+				      breakpoint: 600,
+				      settings: {
+				        slidesToShow: 1,
+				        slidesToScroll: 1,
+				        infinite: true,
+				        centerMode: true
+				      }
+				    }
+				]
+			});
+		}
+		else {
+			$('.js-classes').slick('unslick');
+		}
+	});
+
 	(function() {
 
 	    var faq__main = $('.faq__main');

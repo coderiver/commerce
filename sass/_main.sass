@@ -478,15 +478,34 @@
 	.class__inn
 		.class__wrap
 			text-align: left
+			margin: 20px 0 40px -48px 
+			.class__item
+				margin: 0 0 40px 48px
 	+r(1210)
 		.class__inn
 			.class__wrap
 				text-align: center
-	+r(580)
+	+r(1023)
 		.class__inn
+			.class__wrap
+				margin: 20px 0 40px 
+				.class__item
+					margin: 0 20px
+	+r(600)
+		.class__inn
+			width: 100% 
 			padding: 20px 0 0
-		.slick-prev, .slick-next
-			top: 17%
+			.class__wrap
+				.class__item
+					margin: 0 10px
+				.slick-prev, .slick-next
+					top: 17%
+				.slick-prev
+					left: 0
+					+svg(prev-m, 25, 70)
+				.slick-next
+					right: 0
+					+svg(next-m, 25, 70)
 	
 .class
 	.class__wrap		
@@ -531,7 +550,7 @@
 					color: #5a5a5a
 					font-size: 15px
 					font-weight: 600
-					+semi
+					+bold
 	+r(580)
 		.class__wrap		
 			.class__item
@@ -550,6 +569,7 @@
 		text-align: left
 	.testimonials__wrap
 		position: relative
+		margin-left: -40px
 		font-size: 0
 		.slick-list
 			overflow: hidden
@@ -567,7 +587,7 @@
 		display: inline-block
 		vertical-align: top
 		width: 342px
-		margin: 35px 20px 35px
+		margin: 35px 0 35px 40px
 		color: #5a5a5a
 		text-align: left
 		span
@@ -612,11 +632,12 @@
 		.h3
 			margin: 0px auto 40px
 		.testimonials__wrap
+			margin-left: 0
 			overflow: visible
 		.testimonials__item
 			width: auto
 			margin: 0 10px
-	+r(580)
+	+r(600)
 		.main__logo
 			.testimonials__logo
 				margin: 0
