@@ -17,20 +17,11 @@
 			+cover
 	.main__logo
 		text-align: center
+		font-size: 0
 		span
 			position: relative
-			margin-bottom: 40px
-			p
-				position: absolute
-				bottom: 40px
-				left: 0
-				right: 0
-				color: #e35205
-				font-size: 26px
-				font-weight: 700
-				text-transform: uppercase
-				letter-spacing: 2px
-				+bold
+			display: block
+			margin: 0 auto 40px
 	.main__inner
 		text-align: center
 		& > p
@@ -69,7 +60,9 @@
 		
 .approach
 	.approach__logo
-		+svg(approach, 176, 179)
+		width: 176px
+		height: 179px
+		background: url("../img/approach.png")
 	.approach__inn
 		ul
 			margin-bottom: 35px
@@ -166,10 +159,10 @@
 
 				
 .team
-	span.team__logo
-		+svg(team, 276, 275)
-		p
-			bottom: 90px
+	.team__logo
+		width: 276px
+		height: 275px
+		background: url("../img/team.png")
 	.main__inner
 		& > p
 			padding-bottom: 0
@@ -295,7 +288,9 @@
 		
 .class
 	.class__logo
-		+svg(class, 177, 179)
+		width: 177px
+		height: 179px
+		background: url("../img/class-logo.png")
 	.class__inn
 		width: 1110px
 		margin: 0 auto
@@ -452,7 +447,7 @@
 			font-weight: 400 
 	+r(767)
 		.faq__menu
-			li
+			a
 				border: none
 			
 
@@ -460,11 +455,11 @@
 
 .classes
 	.main__logo
-		margin-top: -215px
+		margin-top: -177px
 		.class__logo
-			+svg(class2, 276, 275)
-			p
-				bottom: 90px
+			width: 276px
+			height: 275px
+			background: url("../img/class-logo2.png")
 	.class__wrap
 		margin-left: -59px
 		.class__item
@@ -473,9 +468,11 @@
 	+r(580)
 		.main__logo
 			.class__logo
-				margin: 0
+				margin: 0 auto
 		.class__inn
 			padding: 20px 0 0
+		.class__wrap
+			margin: 0 auto
 		.slick-prev, .slick-next
 			top: 17%
 				
@@ -645,7 +642,7 @@
 	+r(600)
 		.main__logo
 			.testimonials__logo
-				margin: 0
+				margin: 0 auto
 		.h3
 			margin: 10px auto 20px 
 		.testimonials__inn
@@ -670,7 +667,7 @@
 	.main__logo
 		margin-top: -215px
 		.team__logo
-			margin: 0
+			margin: 0 auto
 	.main__inner
 		p
 			padding-bottom: 35px
@@ -760,7 +757,10 @@
 	.main__logo
 		margin-top: -140px
 		.sponsors__logo
-			+svg(sponsors-logo, 208, 207)
+			width: 208px
+			height: 207px
+			background: url("../img/sponsors-logo.png")
+			z-index: 3
 	.main__inner
 		padding: 45px 0
 		text-align: center
