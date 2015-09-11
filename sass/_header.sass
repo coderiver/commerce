@@ -73,8 +73,13 @@
 				margin: 0 auto
 	+r(767)
 		.header__top
+			position: fixed
+			top: 0
+			left: 0
+			right: 0
 			padding: 11px 0 8px
 			background: url("../img/bg-t-m.jpg")
+			z-index: 5
 			+cover
 			.menu-mob
 				display: block
@@ -96,6 +101,7 @@
 			.menu.menu_drop.is-active
 				position: relative
 				top: 0
+				float: none
 		&.header_main > .btn
 			display: block
 			width: 100% 

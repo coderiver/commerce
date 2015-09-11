@@ -62,7 +62,7 @@ a { text-decoration: none; }
 .menu ul li { float: left; margin-left: 50px; }
 .menu ul li:first-child { margin-left: 0; }
 .menu ul li a { display: block; margin-bottom: 4px; text-transform: uppercase; color: #FFF; font-size: 15px; font-family: "ProximaNovaBlack", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-.menu.menu_drop { display: none; position: absolute; top: 50px; left: 0; right: 0; bottom: 0; background: url("../img/bg-drop.jpg"); padding: 30px; text-align: center; z-index: 2; text-align: center; font-size: 0; }
+.menu.menu_drop { display: none; position: absolute; top: 40px; left: 0; right: 0; bottom: 0; min-height: 100vh; padding: 30px; background: url("../img/bg-drop.jpg"); text-align: center; z-index: 4; text-align: center; font-size: 0; }
 .menu.menu_drop:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .menu.menu_drop ul { display: inline-block; vertical-align: middle; }
 .menu.menu_drop ul li { float: none; display: block; margin: 0; padding: 20px 0; }
@@ -104,7 +104,8 @@ a { text-decoration: none; }
   .main .main__wrap.team { padding: 80px 0; }
   .main .main__wrap.class { padding: 80px 0 40px; }
   .main .main__wrap.testimonials { padding: 80px 0 40px; } }
-@media only screen and (max-width: 767px) { .main .main__inner > p { width: 94%; padding-bottom: 15px; }
+@media only screen and (max-width: 767px) { .main .main__wrap.faq { padding-top: 40px; }
+  .main .main__inner > p { width: 94%; padding-bottom: 15px; }
   .main .main__inner > .btn { margin-bottom: 20px; } }
 @media only screen and (max-width: 580px) { .main .main__wrap.past-classes { padding: 40px 0; }
   .main .main__wrap.classes, .main .main__wrap.testimonials { padding: 40px 0 20px; } }
@@ -229,15 +230,18 @@ a { text-decoration: none; }
 .faq .faq__content span { display: block; padding: 10px 0; font-weight: 700; }
 .faq .faq__content span:first-child { padding-top: 0; }
 .faq .faq__content p { font-weight: 400; }
-@media only screen and (max-width: 767px) { .faq .faq__menu a { border: none; } }
+@media only screen and (max-width: 767px) { .faq .faq__menu a { border: none; display: block; } }
 
 .classes .main__logo { margin-top: -177px; }
 .classes .main__logo .class__logo { width: 276px; height: 275px; background: url("../img/class-logo2.png"); }
-.classes .class__wrap { margin-left: -59px; }
-.classes .class__wrap .class__item { width: 230px; margin: 0 0 40px 59px; }
+.classes .class__inn .class__wrap { margin-left: -59px; text-align: left; }
+.classes .class__inn .class__wrap .class__item { width: 230px; margin: 0 0 40px 59px; }
+@media only screen and (max-width: 1210px) { .classes .class__inn .class__wrap { text-align: center; } }
+@media only screen and (max-width: 1023px) { .classes .class__inn .class__wrap { margin: 20px 0 40px; }
+  .classes .class__inn .class__wrap .class__item { margin: 0 20px; } }
 @media only screen and (max-width: 580px) { .classes .main__logo .class__logo { margin: 0 auto; }
   .classes .class__inn { padding: 20px 0 0; }
-  .classes .class__wrap { margin: 0 auto; }
+  .classes .class__inn .class__wrap { margin: 0 auto; }
   .classes .slick-prev, .classes .slick-next { top: 17%; } }
 
 .past-classes .class__inn .class__wrap { text-align: left; margin: 20px 0 40px -59px; }
@@ -264,12 +268,12 @@ a { text-decoration: none; }
 .testimonials .h3 { margin: 35px auto; }
 .testimonials .testimonials__logo { margin-bottom: 0; background: url("../img/svg/testimonials.svg") no-repeat 0 0; -moz-background-size: 57px 50px; -o-background-size: 57px 50px; -webkit-background-size: 57px 50px; background-size: 57px 50px; width: 57px; height: 50px; display: inline-block; }
 .testimonials .testimonials__inn { width: 1110px; margin: 0 auto; text-align: left; }
-.testimonials .testimonials__wrap { position: relative; margin-left: -42px; font-size: 0; }
+.testimonials .testimonials__wrap { position: relative; font-size: 0; }
 .testimonials .testimonials__wrap .slick-list { overflow: hidden; }
 .testimonials .testimonials__wrap .slick-prev, .testimonials .testimonials__wrap .slick-next { position: absolute; top: 45%; font-size: 0; }
 .testimonials .testimonials__wrap .slick-prev { left: -24px; background: url("../img/svg/prev.svg") no-repeat 0 0; -moz-background-size: 31px 31px; -o-background-size: 31px 31px; -webkit-background-size: 31px 31px; background-size: 31px 31px; width: 31px; height: 31px; display: inline-block; }
 .testimonials .testimonials__wrap .slick-next { right: -24px; background: url("../img/svg/next.svg") no-repeat 0 0; -moz-background-size: 31px 31px; -o-background-size: 31px 31px; -webkit-background-size: 31px 31px; background-size: 31px 31px; width: 31px; height: 31px; display: inline-block; }
-.testimonials .testimonials__item { display: inline-block; vertical-align: top; width: 342px; margin: 35px 0 35px 42px; color: #5a5a5a; text-align: left; }
+.testimonials .testimonials__item { display: inline-block; vertical-align: top; width: 342px; margin: 35px 21px 35px; color: #5a5a5a; text-align: left; }
 .testimonials .testimonials__item span { display: block; font-size: 14px; font-weight: 700; text-transform: uppercase; font-family: "ProximaNovaBold", Arial, sans-serif; }
 .testimonials .testimonials__item p { display: block; font-size: 15px; font-weight: 400; font-family: "ProximaNovaRegular", Arial, sans-serif; }
 .testimonials .testimonials__post { position: relative; margin-bottom: 35px; padding: 25px; border: 1px solid #dcdfe1; }
@@ -356,14 +360,14 @@ a { text-decoration: none; }
 @media only screen and (max-width: 1023px) { .header .header__bottom { text-align: center; }
   .header .header__bottom .h2 { float: none; }
   .header .header__bottom a.btn { float: none; margin: 0 auto; } }
-@media only screen and (max-width: 767px) { .header .header__top { padding: 11px 0 8px; background: url("../img/bg-t-m.jpg"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+@media only screen and (max-width: 767px) { .header .header__top { position: fixed; top: 0; left: 0; right: 0; padding: 11px 0 8px; background: url("../img/bg-t-m.jpg"); z-index: 5; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
   .header .header__top .menu-mob { display: block; }
   .header .header__inner { padding: 120px 0 0; }
   .header .header__inner > .container p { font-size: 20px; font-weight: 600; }
   .header .header__inner > .container .h1 { margin-bottom: 30px; font-size: 25px; font-weight: 700; }
   .header .header__inner > .container > .btn { display: none; }
   .header.header_faq .header__top { padding: 11px 0 8px; }
-  .header.header_faq .menu.menu_drop.is-active { position: relative; top: 0; }
+  .header.header_faq .menu.menu_drop.is-active { position: relative; top: 0; float: none; }
   .header.header_main > .btn { display: block; width: 100%; } }
 
 .logo { float: left; }
